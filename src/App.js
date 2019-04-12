@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {HashRouter, Route, Switch, Redirect} from 'react-router-dom';
+import Nav from './component/Nav';
+import Home from './routes/Home';
+import Staff from './routes/Staff';
+import PAYE from './routes/PAYE';
+import 'bootstrap/dist/css/bootstrap.css';
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <HashRouter>
+          <div>
+            <Nav />
+            <Switch>
+              <Route exact path='/' component={Home}/>
+              <Route path='/staff' component={Staff}/>
+              <Route path='/paye' component={PAYE}/>
+              <Redirect to='/?lx=unsafe'/>
+            </Switch>
+          </div>
+        </HashRouter>
       </div>
+
     );
   }
 }
