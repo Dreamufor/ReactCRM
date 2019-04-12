@@ -15,6 +15,7 @@ class Staff extends Component {
 
   render() {
     return (
+      <div className="container-fluid">
       <div className="row">
         <div className="col-2">
             <nav className="nav flex-column">
@@ -27,12 +28,13 @@ class Staff extends Component {
           <Switch>
                 <Route path='/staff/list' component={List}/>
                 <Route path='/staff/create' component={Create}/>
-                <Route path='/staff/detail' component={Detail}/>
+                <Route path='/staff/detail/:id' component={Detail}/>
                 {/* set default page*/}
                 <Redirect from='/staff' to='/staff/list'/>
           </Switch>
           </div>
         </div>
+      </div>
       </div>
     )
   }
