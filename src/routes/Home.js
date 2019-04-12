@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {LocaleProvider, DatePicker, Icon, Button} from 'antd';
+import {} from 'antd';
+// import '../static/css/antd.css';
+import 'antd/dist/antd.css';
+
+
 // LocaleProvider 国际化组件，把组件汉化
 class Home extends Component {
   constructor(props, context){
@@ -10,9 +14,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        This is a Home page;
-      </div>
+        <div></div>
     )
   }
 }

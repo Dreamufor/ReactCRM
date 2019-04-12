@@ -8,7 +8,6 @@ import PAYE from './routes/PAYE';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-
 class App extends Component {
   render() {
     return (
