@@ -8,9 +8,6 @@ import {NavLink} from 'react-router-dom';
 
 
 class Staff extends Component {
-  constructor(props, context){
-      super(props, context)
-  }
 
 
   render() {
